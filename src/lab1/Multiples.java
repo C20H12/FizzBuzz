@@ -22,7 +22,7 @@ public class Multiples {
         return cnt;
     }
 
-    private static int multiples() {
+    public static int multiples() {
         return multiples(1000, 3, 5);
     }
 

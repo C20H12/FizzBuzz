@@ -39,5 +39,12 @@ public class MultiplesTest {
                 Multiples.multiples(1000, 4, 4),
                 "Multiples.multiples(1000, 4, 4) is incorrect.");
     }
+    @Test
+    public void testDefault() {
+        assertEquals(466,
+                Multiples.multiples(),
+                "Multiples.multiples() is incorrect for default values");
+    }
+
 
 }
