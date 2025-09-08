@@ -5,10 +5,12 @@ public class Multiples {
         System.out.println(multiples());
 
         for (int i = 0; i < 1000; i++) {
-        for (int j = 0; j < 1000; j++) {
-        for (int k = 0; k < 1000; k++) {
-            assert (multiples(i, j, k) == multiples2(i,j,k));
-        }}}
+            for (int j = 0; j < 1000; j++) {
+                for (int k = 0; k < 1000; k++) {
+                    assert (multiples(i, j, k) == multiples2(i, j, k));
+                }
+            }
+        }
 
         System.out.println(123);
     }
@@ -16,8 +18,7 @@ public class Multiples {
     public static int multiples(int n, int a, int b) {
         int cnt = 0;
         for (int i = 1; i < n; i++) {
-            if (i % a == 0) cnt++;
-            else if (a != b && i % b == 0) cnt++;
+            if (i % a == 0 || i % b == 0) cnt++;
         }
         return cnt;
     }
